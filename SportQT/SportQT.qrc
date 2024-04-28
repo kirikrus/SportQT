@@ -1,4 +1,13 @@
 <RCC>
-    <qresource prefix="SportQT">
+    <qresource prefix="/SportQT"/>
+    <qresource prefix="/gif">
+        <file>gif/Francuzsckij_zhim_lezha_so_shtangoj.gif</file>
+        <file>gif/Good_morning_sto_shtangoj.gif</file>
+        <file>gif/Sgibanie_ruk_so_shtangoj.gif</file>
+        <file>gif/Stanovaya_tyaga-2.gif</file>
+        <file>gif/Tyaga_shtangi_k_podborodku.gif</file>
+        <file>gif/Vypad_vpered_so_shtangoj.gif</file>
+        <file>gif/Zhim_lezha_so_shtangoj.gif</file>
+        <file>gif/Zhim_uzkij_so_shtangoj.gif</file>
     </qresource>
 </RCC>

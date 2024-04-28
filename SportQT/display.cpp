@@ -1,5 +1,4 @@
 #include "SportQT.h"
-#include "user.h"
 
 /*
 Функциональные требования к программе:
@@ -20,7 +19,7 @@
 void copy_paste() {}
 
 void setUP(exercise * exercise, quint16 approach_count, quint16 max_weight) {
-	quint16 proc{.45 / approach_count};
+	quint16 proc{static_cast<quint16>(.45 / approach_count)};
 	quint16 cur_proc = .55;
 	for (int i{ 0 }; i <= approach_count; i++) {
 		exercise->approach[i].weight = cur_proc * max_weight;
