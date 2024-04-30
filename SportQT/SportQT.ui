@@ -164,11 +164,6 @@ border-radius: 20px;
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="calc">
-     <attribute name="title">
-      <string>Страница</string>
-     </attribute>
-    </widget>
     <widget class="QWidget" name="trainInfo">
      <attribute name="title">
       <string>Tab 2</string>
@@ -182,6 +177,9 @@ border-radius: 20px;
         <height>471</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="widgetResizable">
        <bool>true</bool>
       </property>
@@ -194,6 +192,239 @@ border-radius: 20px;
          <height>471</height>
         </rect>
        </property>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>5</y>
+          <width>411</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="SportQT.qrc">:/gif/gif/Francuzsckij_zhim_lezha_so_shtangoj.gif</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>175</y>
+          <width>411</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0.512, y1:1, x2:0.500318, y2:0, stop:0.329545 rgba(47, 47, 47, 255), stop:1 rgba(255, 255, 255, 0));</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>230</y>
+          <width>411</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>26</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>лол</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>270</y>
+          <width>411</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>411</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout"/>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>310</y>
+          <width>411</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>400</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Число подходов</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>370</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Желаемый вес</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="start">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>390</y>
+          <width>71</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 255, 156);
+color: rgb(56, 56, 56);
+border-radius: 10px; </string>
+        </property>
+        <property name="text">
+         <string>Расчёт</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="podhod">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>400</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 10px;
+border: 1px solid rgb(250, 255, 156);
+color: white;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="weight">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>370</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 10px;
+border: 1px solid rgb(250, 255, 156);
+color: white;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="povtor">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>430</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 10px;
+border: 1px solid rgb(250, 255, 156);
+color: white;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>430</y>
+          <width>111</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Число повторений</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="startCalc">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>390</y>
+          <width>71</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 255, 156);
+color: rgb(56, 56, 56);
+border-radius: 10px; </string>
+        </property>
+        <property name="text">
+         <string>Подбор
+блинов</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>

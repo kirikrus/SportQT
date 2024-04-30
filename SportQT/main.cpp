@@ -3,6 +3,36 @@
 #include <QSqlQuery>
 #include <QSqlDatabase>
 
+void infoShow(Ui::SportQTClass* ui, QString id) {
+    QSqlQuery query;
+    query.exec("SELECT * FROM Exercises WHERE id = " + id);
+    query.next();
+
+    QString desc = query.value("description").toString();
+    QString photoPath = query.value("photo_path").toString();
+    QString name = query.value("name").toString();
+
+    ui->label_2->setPixmap(QPixmap(":/gif/gif/" + photoPath));
+    ui->label_3->setText(name);
+    ui->label_5->setText(desc);
+
+    query.exec("SELECT MuscleGroups.name FROM MuscleGroups "
+        "INNER JOIN ExerciseMuscleGroups ON MuscleGroups.id = ExerciseMuscleGroups.muscle_group_id "
+        "WHERE ExerciseMuscleGroups.exercise_id = " + id);
+    while (query.next()) {
+        QString tag1 = query.value("name").toString();
+
+        auto tag = new QLabel();
+        tag->setGeometry(QRect(10, 110, 41, 16));
+        tag->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 173, 156);\n"
+            "border-radius: 5px;"));
+        tag->setText(tag1);
+
+        ui->horizontalLayout->addWidget(tag);
+    }
+
+}
+
 void onLoad(Ui::SportQTClass *ui) {
     QWidget* widget;
     QLabel* label_2;
@@ -20,7 +50,7 @@ void onLoad(Ui::SportQTClass *ui) {
         QString id = query.value("id").toString();
         QString photoPath = query.value("photo_path").toString();
         QString name = query.value("name").toString();
-
+        
         QSqlQuery tag_query;
         tag_query.exec("SELECT MuscleGroups.name FROM MuscleGroups "
             "INNER JOIN ExerciseMuscleGroups ON MuscleGroups.id = ExerciseMuscleGroups.muscle_group_id "
@@ -61,8 +91,9 @@ void onLoad(Ui::SportQTClass *ui) {
         pushButton_2->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
             "border: none;"));
 
-        QObject::connect(pushButton_2, &QPushButton::clicked, []() {
-            // Ваш код обработки события клика на метке
+        QObject::connect(pushButton_2, &QPushButton::clicked, [=]() {
+            ui->tabWidget->setCurrentIndex(1);
+            infoShow(ui, id);
             });
 
         ui->gridLayout->addWidget(widget, j, i++, 1, 1);
