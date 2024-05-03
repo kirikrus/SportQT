@@ -37,7 +37,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
-    <QtInstall>6.6.0_msvc2019_64</QtInstall>
+    <QtInstall>6.2.4_msvc2019_64</QtInstall>
     <QtModules>core;gui;widgets;sql</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
@@ -94,7 +94,6 @@
     <QtRcc Include="SportQT.qrc" />
     <QtUic Include="SportQT.ui" />
     <QtMoc Include="SportQT.h" />
-    <ClCompile Include="display.cpp" />
     <ClCompile Include="exercise.cpp" />
     <ClCompile Include="SportQT.cpp" />
     <ClCompile Include="main.cpp" />

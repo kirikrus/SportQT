@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>820</width>
+    <width>819</width>
     <height>469</height>
    </rect>
   </property>
@@ -71,10 +71,16 @@ border-radius: 20px;
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>140</y>
+      <y>190</y>
       <width>411</width>
-      <height>331</height>
+      <height>281</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>411</width>
+      <height>281</height>
+     </size>
     </property>
     <property name="widgetResizable">
      <bool>true</bool>
@@ -85,9 +91,135 @@ border-radius: 20px;
        <x>0</x>
        <y>0</y>
        <width>409</width>
-       <height>329</height>
+       <height>279</height>
       </rect>
      </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>381</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(70, 70, 70);</string>
+        </property>
+        <widget class="QLabel" name="img">
+         <property name="geometry">
+          <rect>
+           <x>-10</x>
+           <y>0</y>
+           <width>121</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="SportQT.qrc">:/gif/gif/Francuzsckij_zhim_lezha_so_shtangoj.gif</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="text">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>10</y>
+           <width>261</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Impact</family>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+         </property>
+         <property name="text">
+          <string>лол</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="progress">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>40</y>
+           <width>71</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+color: white;
+border-radius: 10px; 
+border: 1px solid rgb(250, 255, 156);</string>
+         </property>
+         <property name="text">
+          <string>прогресс</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="copy">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>40</y>
+           <width>71</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+color: white;
+border-radius: 10px; 
+border: 1px solid rgb(250, 255, 156);</string>
+         </property>
+         <property name="text">
+          <string>копировать</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="delete_2">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>40</y>
+           <width>71</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+color: white;
+border-radius: 10px; 
+border: 1px solid rgb(250, 255, 156);</string>
+         </property>
+         <property name="text">
+          <string>удалить</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QTabWidget" name="tabWidget">
@@ -196,7 +328,7 @@ border-radius: 20px;
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>5</y>
+          <y>4</y>
           <width>411</width>
           <height>261</height>
          </rect>
@@ -221,7 +353,7 @@ border-radius: 20px;
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: qlineargradient(spread:pad, x1:0.512, y1:1, x2:0.500318, y2:0, stop:0.329545 rgba(47, 47, 47, 255), stop:1 rgba(255, 255, 255, 0));</string>
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0.512, y1:1, x2:0.500318, y2:0, stop:0.329545 rgba(56, 56, 56, 255), stop:1 rgba(255, 255, 255, 0));</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -257,16 +389,19 @@ background-color: rgba(255, 255, 255, 0);</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>270</y>
+          <y>260</y>
           <width>411</width>
-          <height>34</height>
+          <height>41</height>
          </rect>
         </property>
         <property name="minimumSize">
          <size>
           <width>411</width>
-          <height>34</height>
+          <height>20</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: black;</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -280,9 +415,9 @@ background-color: rgba(255, 255, 255, 0);</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>310</y>
+          <y>300</y>
           <width>411</width>
-          <height>51</height>
+          <height>61</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -299,7 +434,7 @@ background-color: rgba(255, 255, 255, 0);</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>400</y>
+          <y>407</y>
           <width>101</width>
           <height>16</height>
          </rect>
@@ -315,7 +450,7 @@ background-color: rgba(255, 255, 255, 0);</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>370</y>
+          <y>377</y>
           <width>91</width>
           <height>16</height>
          </rect>
@@ -342,7 +477,8 @@ color: rgb(56, 56, 56);
 border-radius: 10px; </string>
         </property>
         <property name="text">
-         <string>Расчёт</string>
+         <string>Расчёт
+подходов</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="podhod">
@@ -358,6 +494,9 @@ border-radius: 10px; </string>
          <string notr="true">border-radius: 10px;
 border: 1px solid rgb(250, 255, 156);
 color: white;</string>
+        </property>
+        <property name="text">
+         <string/>
         </property>
        </widget>
        <widget class="QLineEdit" name="weight">
@@ -394,7 +533,7 @@ color: white;</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>430</y>
+          <y>437</y>
           <width>111</width>
           <height>16</height>
          </rect>
@@ -425,6 +564,44 @@ border-radius: 10px; </string>
 блинов</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="back">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>4</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft New Tai Lue</family>
+          <pointsize>24</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 255, 156);
+color: rgb(56, 56, 56);
+border-radius: 10px; </string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+       <zorder>label_2</zorder>
+       <zorder>frame</zorder>
+       <zorder>label_5</zorder>
+       <zorder>label_6</zorder>
+       <zorder>label_7</zorder>
+       <zorder>start</zorder>
+       <zorder>podhod</zorder>
+       <zorder>weight</zorder>
+       <zorder>povtor</zorder>
+       <zorder>label_8</zorder>
+       <zorder>startCalc</zorder>
+       <zorder>frame_2</zorder>
+       <zorder>label_3</zorder>
+       <zorder>back</zorder>
       </widget>
      </widget>
     </widget>
