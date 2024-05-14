@@ -38,7 +38,7 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.2.4_msvc2019_64</QtInstall>
-    <QtModules>core;gui;widgets;sql</QtModules>
+    <QtModules>core;gui;widgets;sql;charts</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
@@ -89,7 +89,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="approach.cpp" />
     <ClCompile Include="user.cpp" />
     <QtRcc Include="SportQT.qrc" />
     <QtUic Include="SportQT.ui" />
@@ -99,7 +98,6 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="approach.h" />
     <ClInclude Include="exercise.h" />
     <ClInclude Include="user.h" />
   </ItemGroup>

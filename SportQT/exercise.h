@@ -1,12 +1,12 @@
 #include <qimage.h>
 #include <QDateTime>
-#include "approach.h"
 
 struct exercise{
 	quint16 id;
+	quint16 approach_count;
+	quint16 max_weight;
+	quint16 repetitions;
 
-	QVector<approach> approach;
-
-	exercise(quint16);
+	exercise(quint16, quint16, quint16, quint16);
 };
 
