@@ -4,6 +4,7 @@
 #include <QSqlDatabase>
 #include <qmovie.h>
 #include <QMessageBox>
+#include <QtCharts>
 
 /*
 Функциональные требования к программе:
@@ -218,7 +219,7 @@ void onLoad(Ui::SportQTClass *ui, user *user) {
         });
 }
 
-void userTrainInfoShow(Ui::SportQTClass* ui, QString id) {
+void userTrainInfoShow(Ui::SportQTClass* ui, QString id, user *user) {
     QSqlQuery query;
 
     query.exec("SELECT * FROM User WHERE id = " + id);
@@ -268,6 +269,48 @@ void userTrainInfoShow(Ui::SportQTClass* ui, QString id) {
 
         ui->horizontalLayout_2->addWidget(tag);
     }
+
+#pragma region Chart
+    QLayoutItem* child;
+    if (ui->chartWidget->layout() != nullptr)
+        delete ui->chartWidget->layout();
+
+    QChart* chart = new QChart();
+    QValueAxis* axisX = new QValueAxis();
+    QValueAxis* axisY = new QValueAxis();
+
+    chart->addAxis(axisX, Qt::AlignBottom);
+    chart->addAxis(axisY, Qt::AlignLeft);
+
+    QVector<double> progress = user->progress(exercise_id.toInt());
+    chart->removeAllSeries();
+    QLineSeries* series = new QLineSeries();
+    series->append(0, 0);
+    int j{ 1 };
+    for (auto i : progress) series->append(j++,i);
+
+    chart->addSeries(series);
+    series->attachAxis(axisX);
+    series->attachAxis(axisY);
+    chart->legend()->setVisible(false);
+
+    axisX->setLabelsColor(Qt::white);
+    axisY->setLabelsColor(Qt::white);
+    chart->setBackgroundBrush(QBrush(qRgb(56, 56, 56)));
+    series->setColor((qRgb(250, 255, 156)));
+    axisX->setGridLineColor((qRgb(86, 86, 86)));
+    axisY->setGridLineColor((qRgb(86, 86, 86)));
+
+    chart->setMargins(QMargins(0, 0, 0, 0));
+
+    QChartView* chartView = new QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+    QVBoxLayout* layout = new QVBoxLayout();
+    layout->addWidget(chartView);
+    ui->chartWidget->setLayout(layout);
+
+#pragma endregion
+
 
     QObject::connect(ui->back_2, &QPushButton::clicked, [=]() {
         movie->stop();
@@ -349,7 +392,7 @@ void userLoad(Ui::SportQTClass* ui, user* user) {
 
         QObject::connect(info, &QPushButton::clicked, [=]() {
             ui->tabWidget->setCurrentIndex(2);
-            userTrainInfoShow(ui, QString::number(id));
+            userTrainInfoShow(ui, QString::number(id), user);
             });
         
         QObject::connect(copy, &QPushButton::clicked, [=]() {

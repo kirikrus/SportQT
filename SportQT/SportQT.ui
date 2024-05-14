@@ -812,6 +812,16 @@ background-color: rgba(255, 255, 255, 0);</string>
          <string>лол</string>
         </property>
        </widget>
+       <widget class="QWidget" name="chartWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>290</y>
+          <width>391</width>
+          <height>161</height>
+         </rect>
+        </property>
+       </widget>
        <zorder>label_4</zorder>
        <zorder>frame_3</zorder>
        <zorder>label_10</zorder>
@@ -826,6 +836,7 @@ background-color: rgba(255, 255, 255, 0);</string>
        <zorder>back_2</zorder>
        <zorder>label_9</zorder>
        <zorder>frame_4</zorder>
+       <zorder>chartWidget</zorder>
       </widget>
      </widget>
     </widget>

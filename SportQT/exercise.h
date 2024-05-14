@@ -8,5 +8,6 @@ struct exercise{
 	quint16 repetitions;
 
 	exercise(quint16, quint16, quint16, quint16);
+	double multi();
 };
 

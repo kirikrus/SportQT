@@ -3,6 +3,6 @@
 struct user{
 	QVector<exercise> exercise;
 
-	void progress(quint16);
+	QVector<double> progress(quint16);
 };
 
