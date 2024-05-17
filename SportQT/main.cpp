@@ -5,7 +5,6 @@
 #include <qmovie.h>
 #include <QMessageBox>
 #include <QtCharts>
-
 /*
 Функциональные требования к программе:
 1. Перечень тренировок. Создать список всех тренировок, где для каждой тренировки можно просматривать и редактировать информацию.
@@ -118,9 +117,9 @@ void infoShow(Ui::SportQTClass* ui, QString id) {
 void onLoad(Ui::SportQTClass *ui, user *user) {
     QWidget* widget;
     QLabel* label_2;
-    QLabel* label_3;
-    QLabel* label_4;
-    QLabel* label_5;
+    ScrollingLabel* label_3;
+    ScrollingLabel* label_4;
+    ScrollingLabel* label_5;
     QPushButton* pushButton_2;
     
     QSqlQuery query;
@@ -153,26 +152,27 @@ void onLoad(Ui::SportQTClass *ui, user *user) {
         label_2->setGeometry(QRect(0, 20, 111, 71));
         label_2->setPixmap(QPixmap(":/gif/gif/" + photoPath));//фото
         label_2->setScaledContents(true);
-        label_3 = new QLabel(widget);
+        label_3 = new ScrollingLabel(widget);
         label_3->setGeometry(QRect(10, 90, 91, 16));
         QFont font2;
         font2.setBold(true);
         label_3->setFont(font2);
         label_3->setText(name);
-        label_4 = new QLabel(widget);
+        label_4 = new ScrollingLabel(widget);
         label_4->setGeometry(QRect(10, 110, 41, 16));
         label_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 173, 156);\n"
             "border-radius: 5px;"));
         label_4->setText(tag1);
-        label_5 = new QLabel(widget);
+        label_5 = new ScrollingLabel(widget);
         label_5->setGeometry(QRect(60, 110, 41, 16));
         label_5->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 173, 156);\n"
             "border-radius: 5px;"));
         label_5->setText(tag2);
         pushButton_2 = new QPushButton(widget);
         pushButton_2->setGeometry(QRect(0, 0, 111, 131));
-        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-            "border: none;"));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{background-color: transparent;\n"
+            "border: none;}"
+            "QPushButton:hover{background-color: rgba(0,0,0,0.2)}"));
         QObject::connect(pushButton_2, &QPushButton::clicked, [=]() {
             ui->tabWidget->setCurrentIndex(1);
             infoShow(ui, id);
@@ -350,7 +350,7 @@ void userLoad(Ui::SportQTClass* ui, user* user) {
 #pragma region Widget
         QWidget* widget;
         QLabel* img;
-        QLabel* text;
+        ScrollingLabel* text;
         QPushButton* info;
         QPushButton* copy;
         QPushButton* delete_2;
@@ -369,7 +369,7 @@ void userLoad(Ui::SportQTClass* ui, user* user) {
         img->setGeometry(QRect(-10, 0, 121, 91));
         img->setPixmap(QPixmap(":/gif/gif/" + photoPath));//фото
         img->setScaledContents(true);
-        text = new QLabel(widget);
+        text = new ScrollingLabel(widget);
         text->setGeometry(QRect(120, 10, 261, 21));
         text->setMinimumSize(QSize(0, 0));
         QFont font2;
